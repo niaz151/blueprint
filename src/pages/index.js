@@ -36,9 +36,9 @@ const Homepage = () => {
     <div>
       <Header/>
       <div className='flex flex-col align-center h-screen overflow-scroll'>
+        {/* Awaiting API response */}
         { pairs.length > 0 ? (
           <> 
-            {/* Use keys from first object to determine all filter fields */}
             <SearchBar fields={columns} handleFieldChange={handleFieldChange} handleValueChange={handleValueChange} />
             <List data={pairs} field={filterField} value={filterValue} columns={columns} />
           </>

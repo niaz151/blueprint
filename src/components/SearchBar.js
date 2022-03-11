@@ -6,7 +6,7 @@ const SearchBar = (props) => {
 
     const generateDropdownFields = () => {
         const dropdownFields = [];
-        dropdownFields.push(<option key="disabled" disabled selected>Select your filter field</option>)
+        dropdownFields.push(<option key="disabled" disabled>Select your filter field</option>)
         fields.map(field => {
             dropdownFields.push(
                 <option key={field} value={field}> {field} </option>

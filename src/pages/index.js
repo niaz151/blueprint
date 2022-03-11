@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Header } from '../components/header';
 import List from '../components/List.js';
 import SearchBar from '../components/SearchBar';
 
@@ -34,7 +33,6 @@ const Homepage = () => {
 
   return (
     <div>
-      <Header/>
       <div className='h-screen w-screen overflow-scroll border-2'>
         {/* Awaiting API response */}
         { pairs.length > 0 ? (

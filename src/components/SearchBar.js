@@ -16,7 +16,7 @@ const SearchBar = (props) => {
     }
 
     return (
-        <div className="flex justify-center w-screen">
+        <div className="flex justify-center w-screen mt-5">
             <div className="flex lg:flex-row sm:flex-col">
                 <select name="cars" id="cars" className="border-2 rounded h-10" onChange={(e) => handleFieldChange(e)}>
                     {generateDropdownFields()}

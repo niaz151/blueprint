@@ -23,18 +23,23 @@ const List = (props) => {
     const generateListItems = () => {
         return pairs.map(pair => {
             return (
-                <li key={pair.id}>
-                    <div> {pair.id} </div>
-                    <div> {pair.base_currency} </div>
-                    <div> {pair.quote_currency} </div>
+                <li key={pair.id} className="flex flex-row">
+                    <div className="flex w-2/6 border-2 align-center justify-center"> {pair.id} </div>
+                    <div className="flex w-2/6 border-2 align-center justify-center"> {pair.base_currency} </div>
+                    <div className="flex w-2/6 border-2 align-center justify-center"> {pair.quote_currency} </div>
                 </li>
             )
         })
     }
 
     return (
-        <div className="border-2">
+        <div className="border-2 w-3/6">
             <ul className="border-2">
+                <li className="flex flex-row">
+                    <div className="flex w-2/6 border-2 align-center justify-center"> <b> ID </b> </div>
+                    <div className="flex w-2/6 border-2 align-center justify-center"> <b> Base Currency </b> </div>
+                    <div className="flex w-2/6 border-2 align-center justify-center"> <b> Quote Currency </b> </div>
+                </li>
                 {generateListItems()}
             </ul>
         </div>

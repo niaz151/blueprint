@@ -4,8 +4,7 @@ import List from '../components/List.js';
 const Homepage = () => (
   <div>
     <Header />
-    <div className='flex justify-center'>
-      Content
+    <div className='flex justify-center align-center h-screen border-2 overflow-scroll'>
       <List field="status" value="online" />
     </div>
   </div>

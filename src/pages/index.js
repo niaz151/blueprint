@@ -35,7 +35,7 @@ const Homepage = () => {
   return (
     <div>
       <Header/>
-      <div className='flex flex-col align-center h-screen overflow-scroll'>
+      <div className='h-screen w-screen overflow-scroll border-2'>
         {/* Awaiting API response */}
         { pairs.length > 0 ? (
           <> 

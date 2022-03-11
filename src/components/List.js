@@ -35,7 +35,7 @@ const List = (props) => {
     return (
         <div className="border-2 w-3/6">
             <ul className="border-2">
-                <li className="flex flex-row">
+                <li className="flex flex-row sticky top-0 bg-slate-300">
                     <div className="flex w-2/6 border-2 align-center justify-center"> <b> ID </b> </div>
                     <div className="flex w-2/6 border-2 align-center justify-center"> <b> Base Currency </b> </div>
                     <div className="flex w-2/6 border-2 align-center justify-center"> <b> Quote Currency </b> </div>

@@ -47,3 +47,5 @@ const Homepage = () => {
 }
 
 export default Homepage;
+
+// onClick of item, open new page with specific item details 

@@ -1,26 +1,44 @@
+import Link from 'next/link';
+
 const List = (props) => {
 
     const { field, value, data } = props;
+
+    const DataRow = (pai) => {
+        return(
+            <a href={`pairs/${pair.id}`} target="_blank">
+            <li key={pair.id} className="flex flex-row">
+                <div className="flex w-2/6 border-2 justify-center"> {pair.id} </div>
+                <div className="flex w-2/6 border-2 justify-center"> {pair.base_currency} </div>
+                <div className="flex w-2/6 border-2 justify-center"> {pair.quote_currency} </div>
+            </li>
+            </a>
+        )
+    }
 
     const generateListItems = () => {
         return data.map(pair => {
             if (field === undefined || value === undefined) {
                 return (
-                    <li key={pair.id} className="flex flex-row">
-                        <div className="flex w-2/6 border-2 justify-center"> {pair.id} </div>
-                        <div className="flex w-2/6 border-2 justify-center"> {pair.base_currency} </div>
-                        <div className="flex w-2/6 border-2 justify-center"> {pair.quote_currency} </div>
-                    </li>
-                )
-            }
-            else {
-                if (pair[field].includes(value.toUpperCase())) {
-                    return (
+                   <a href={`pairs/${pair.id}`} target="_blank">
                         <li key={pair.id} className="flex flex-row">
                             <div className="flex w-2/6 border-2 justify-center"> {pair.id} </div>
                             <div className="flex w-2/6 border-2 justify-center"> {pair.base_currency} </div>
                             <div className="flex w-2/6 border-2 justify-center"> {pair.quote_currency} </div>
                         </li>
+                    </a>
+                )
+            }
+            else {
+                if (pair[field].includes(value.toUpperCase())) {
+                    return (
+                        <a href={`pairs/${pair.id}`} target="_blank">
+                        <li key={pair.id} className="flex flex-row">
+                            <div className="flex w-2/6 border-2 justify-center"> {pair.id} </div>
+                            <div className="flex w-2/6 border-2 justify-center"> {pair.base_currency} </div>
+                            <div className="flex w-2/6 border-2 justify-center"> {pair.quote_currency} </div>
+                        </li>
+                        </a>
                     )
                 }
             }
